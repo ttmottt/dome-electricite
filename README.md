@@ -17,7 +17,7 @@ npm run dev
 
 | Fichier | Contenu |
 | --- | --- |
-| `lib/site.ts` | Coordonnées, horaires, infos légales (**téléphone et e-mail à compléter**) |
+| `lib/site.ts` | Coordonnées, horaires, infos légales (assurance et réseaux sociaux à compléter) |
 | `lib/services.ts` | Les 6 services (textes, FAQ, métadonnées SEO) |
 | `lib/cities.ts` | Les villes avec page dédiée `/electricien/[ville]` et les autres communes desservies |
 | `lib/images.ts` | Photos (dans `public/images/`, WebP optimisés) et textes alternatifs |

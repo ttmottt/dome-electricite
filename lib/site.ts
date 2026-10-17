@@ -6,14 +6,15 @@ export const site = {
   name: "Domé Électricité",
   founder: "Benoît Domé",
   foundingYear: 2018,
+  satisfiedClients: 30,
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dome-electricite.fr").replace(/\/$/, ""),
   tagline: "Électricien à Tourcoing et dans la métropole lilloise",
   description:
     "Domé Électricité, artisan électricien à Tourcoing depuis 2018 : dépannage, rénovation, mise aux normes NF C 15-100, tableau électrique, borne de recharge et éclairage LED dans toute la métropole lilloise. Devis gratuit.",
 
-  phone: "03 20 00 00 00", // À COMPLÉTER
-  phoneHref: "+33320000000", // À COMPLÉTER (format international, sans espaces)
-  email: "contact@dome-electricite.fr", // À COMPLÉTER
+  phone: "06 49 50 81 94",
+  phoneHref: "+33649508194",
+  email: "bdome@dome-elec.com",
 
   address: {
     street: "8 rue d'Iéna",

@@ -17,6 +17,7 @@ import { FaqList } from "@/components/FaqList";
 import { CountUp } from "@/components/motion/count-up";
 import { HeroText, HeroVisual, SpinRing } from "@/components/motion/hero-reveal";
 import { Reveal, Stagger, StaggerItem, StaggerLi, StaggerList } from "@/components/motion/reveal";
+import { Reviews } from "@/components/Reviews";
 import { RingMotif } from "@/components/RingMotif";
 import { ServiceCard } from "@/components/ServiceCard";
 import { Badge } from "@/components/ui/badge";
@@ -98,9 +99,9 @@ export default function HomePage() {
             <HeroText delay={0.32}>
               <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t pt-8">
                 <div>
-                  <dt className="text-sm text-muted-foreground">Depuis</dt>
+                  <dt className="text-sm text-muted-foreground">Clients satisfaits</dt>
                   <dd className="font-display text-4xl font-bold text-primary md:text-5xl">
-                    <CountUp from={2000} to={site.foundingYear} />
+                    <CountUp to={site.satisfiedClients} />
                   </dd>
                 </div>
                 <div>
@@ -288,6 +289,8 @@ export default function HomePage() {
           ))}
         </StaggerList>
       </section>
+
+      <Reviews />
 
       {/* Zones */}
       <section className="dark relative overflow-hidden bg-background py-20 text-foreground md:py-28" aria-labelledby="zones-titre">
