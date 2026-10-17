@@ -12,7 +12,6 @@ export function localBusinessSchema() {
     name: site.name,
     alternateName: ["Dome Électricité", "Dome Electricite"],
     founder: { "@type": "Person", name: site.founder },
-    foundingDate: String(site.foundingYear),
     vatID: site.legal.vat,
     description: site.description,
     url: site.url,

@@ -44,7 +44,7 @@ export const cities: City[] = [
     intro:
       "Nous intervenons dans tous les quartiers de Lille, ainsi qu'à Hellemmes et Lomme, pour les particuliers, les propriétaires bailleurs et les commerces.",
     housing:
-      "Appartements anciens du Vieux-Lille, maisons 1930 de Saint-Maurice ou de Fives, immeubles en copropriété de Vauban : chaque logement a ses contraintes (accès, parties communes, syndic). Nous adaptons l'organisation du chantier, notamment pour les remplacements de tableau en appartement et les bornes de recharge en parking collectif.",
+      "Appartements anciens du Vieux-Lille, maisons 1930 de Saint-Maurice ou de Fives, immeubles en copropriété de Vauban : chaque logement a ses contraintes (accès, parties communes, syndic). Nous adaptons l'organisation du chantier, notamment pour les remplacements de tableau en appartement.",
     neighbors: ["marcq-en-baroeul", "villeneuve-d-ascq", "croix"],
   },
   {
@@ -56,7 +56,7 @@ export const cities: City[] = [
     intro:
       "Commune résidentielle limitrophe de Tourcoing, Mouvaux est à quelques minutes de nos locaux : idéal pour un dépannage rapide.",
     housing:
-      "Le parc de maisons individuelles, souvent des années 1930 à 1980, se prête bien aux projets de rénovation, d'éclairage extérieur, de domotique et d'installation de borne de recharge dans le garage ou l'allée.",
+      "Le parc de maisons individuelles, souvent des années 1930 à 1980, se prête bien aux projets de rénovation, d'éclairage extérieur, de domotique et de pose d'une prise renforcée pour recharger la voiture dans le garage ou l'allée.",
     neighbors: ["tourcoing", "marcq-en-baroeul", "roubaix", "croix"],
   },
   {
@@ -92,7 +92,7 @@ export const cities: City[] = [
     intro:
       "Entre Lille et Tourcoing, Marcq-en-Barœul est au cœur de notre zone d'intervention : nous y réalisons rénovations, installations neuves et projets d'éclairage.",
     housing:
-      "Les grandes maisons familiales et résidences de Marcq-en-Barœul accueillent souvent des projets complets : rénovation électrique, éclairage intérieur et extérieur, domotique et borne de recharge pour véhicule électrique.",
+      "Les grandes maisons familiales et résidences de Marcq-en-Barœul accueillent souvent des projets complets : rénovation électrique, éclairage intérieur et extérieur, domotique et prise renforcée pour recharger le véhicule électrique.",
     neighbors: ["mouvaux", "lille", "croix"],
   },
   {
@@ -104,7 +104,7 @@ export const cities: City[] = [
     intro:
       "Nous intervenons dans tous les quartiers de Villeneuve-d'Ascq, des anciens villages d'Annappes, Ascq et Flers aux quartiers de la ville nouvelle.",
     housing:
-      "Beaucoup de maisons construites dans les années 1970 et 1980 arrivent à l'âge où l'installation électrique mérite une rénovation : tableau d'origine, prises insuffisantes, éclairage énergivore. C'est aussi un secteur très demandeur de bornes de recharge.",
+      "Beaucoup de maisons construites dans les années 1970 et 1980 arrivent à l'âge où l'installation électrique mérite une rénovation : tableau d'origine, prises insuffisantes, éclairage énergivore. C'est aussi le bon moment pour prévoir une prise renforcée et recharger sa voiture électrique à domicile.",
     neighbors: ["lille", "croix"],
   },
   {

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps<"/electricien/[vill
   if (!city) return {};
   return pageMetadata({
     title: `Électricien ${city.name} (${city.postalCode}) – Devis gratuit`,
-    description: `Électricien à ${city.name} : dépannage, rénovation, mise aux normes, tableau électrique, borne de recharge et éclairage. ${site.name}, artisan basé à Tourcoing. Devis gratuit.`,
+    description: `Électricien à ${city.name} : dépannage, rénovation, mise aux normes, tableau électrique, prise de recharge pour voiture électrique et éclairage. ${site.name}, artisan basé à Tourcoing. Devis gratuit.`,
     path: `/electricien/${city.slug}`,
   });
 }
@@ -53,7 +53,7 @@ export default async function CityPage({ params }: PageProps<"/electricien/[vill
     },
     {
       q: "Travaillez-vous pour les propriétaires bailleurs et les syndics ?",
-      a: "Oui. Nous réalisons des mises en sécurité après diagnostic, des remplacements de tableau et des installations de bornes en copropriété, avec une facture détaillée pour vos dossiers.",
+      a: "Oui. Nous réalisons des mises en sécurité après diagnostic, des remplacements de tableau et des remises en état d'installations, avec une facture détaillée pour vos dossiers.",
     },
   ];
 

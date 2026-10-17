@@ -13,7 +13,7 @@ import { getArticles } from "@/lib/wordpress/queries";
 export const metadata = pageMetadata({
   title: "Réalisations et conseils",
   description:
-    "Chantiers réalisés à Tourcoing et dans la métropole lilloise, conseils pratiques sur la sécurité électrique, la rénovation, les bornes de recharge et l'éclairage.",
+    "Chantiers réalisés à Tourcoing et dans la métropole lilloise, conseils pratiques sur la sécurité électrique, la rénovation, la recharge des voitures électriques et l'éclairage.",
   path: "/realisations",
 });
 

@@ -16,7 +16,7 @@ import { absoluteUrl, site } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "À propos – Benoît Domé, électricien",
   description:
-    "Domé Électricité, c'est Benoît Domé, artisan électricien installé à Tourcoing depuis 2018. Un interlocuteur unique, des conseils honnêtes et des installations conformes dans toute la métropole lilloise.",
+    "Domé Électricité, c'est Benoît Domé, artisan électricien installé à Tourcoing. Un interlocuteur unique, des conseils honnêtes et des installations conformes dans toute la métropole lilloise.",
   path: "/a-propos",
 });
 
@@ -56,7 +56,7 @@ export default function AboutPage() {
         }}
       />
       <PageHero crumbs={[{ name: "À propos", path: "/a-propos" }]} eyebrow="Qui sommes-nous" title="Un artisan électricien de Tourcoing, à votre écoute">
-        {site.name}, c'est l'entreprise de {site.founder}, électricien installé à Tourcoing depuis {site.foundingYear}.
+        {site.name}, c'est l'entreprise de {site.founder}, électricien installé à Tourcoing.
       </PageHero>
 
       <section className="container-site grid items-center gap-14 py-16 md:py-24 lg:grid-cols-2 lg:gap-20">
@@ -70,14 +70,14 @@ export default function AboutPage() {
           <h2 className="mt-4 text-3xl md:text-5xl">Domé, un nom de famille devenu une signature</h2>
           <div className="prose-site mt-6 text-lg text-foreground/85">
             <p>
-              {site.founder} a créé son entreprise d'électricité en {site.foundingYear}, avec une idée simple : offrir
+              {site.founder} a créé son entreprise d'électricité avec une idée simple : offrir
               aux particuliers et aux professionnels de la métropole lilloise le sérieux d'un artisan qui signe son
               travail de son propre nom.
             </p>
             <p>
               Aujourd'hui installée au {site.address.street} à Tourcoing, {site.name} intervient du dépannage du
               quotidien jusqu'à la rénovation complète, en passant par la mise aux normes, le remplacement de tableau,
-              l'éclairage et l'installation de bornes de recharge.
+              l'éclairage et la pose de prises renforcées pour voiture électrique.
             </p>
             <p>
               Maisons de ville en briques, maisons 1930, anciennes courées, appartements en copropriété ou locaux
@@ -90,9 +90,9 @@ export default function AboutPage() {
       <section className="dark bg-background py-16 text-foreground md:py-20">
         <dl className="container-site grid gap-10 text-center sm:grid-cols-3">
           <Reveal>
-            <dt className="text-muted-foreground">Entreprise créée en</dt>
+            <dt className="text-muted-foreground">Clients satisfaits</dt>
             <dd className="font-display text-7xl font-bold text-primary">
-              <CountUp from={2000} to={site.foundingYear} />
+              <CountUp to={site.satisfiedClients} />
             </dd>
           </Reveal>
           <Reveal delay={0.08}>

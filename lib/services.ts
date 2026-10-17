@@ -100,7 +100,7 @@ export const services: Service[] = [
       "Remplacement du tableau électrique et création des circuits spécialisés",
       "Mise à la terre et liaisons équipotentielles",
       "Reprise du câblage, des prises, interrupteurs et points lumineux",
-      "Pré-équipement pour la fibre, la domotique ou une future borne de recharge",
+      "Pré-équipement pour la fibre, la domotique ou la recharge d'un véhicule électrique",
       "Accompagnement pour l'attestation de conformité Consuel quand elle est requise",
     ],
     approach: [
@@ -144,7 +144,7 @@ export const services: Service[] = [
         "Diagnostic électrique avec anomalies avant une vente ou une location",
         "Tableau à fusibles ou disjoncteurs anciens sans différentiel 30 mA",
         "Tableau saturé, sans place pour un nouveau circuit",
-        "Ajout d'une plaque de cuisson, d'un chauffe-eau, d'une pompe à chaleur ou d'une borne",
+        "Ajout d'une plaque de cuisson, d'un chauffe-eau, d'une pompe à chaleur ou d'une prise de recharge pour véhicule électrique",
         "Absence ou défaut de prise de terre",
       ],
     },
@@ -178,53 +178,57 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "borne-de-recharge",
-    name: "Borne de recharge",
-    title: "Installation de borne de recharge pour véhicule électrique",
-    metaTitle: "Borne de recharge à Tourcoing et Lille",
+    slug: "prise-renforcee-vehicule-electrique",
+    name: "Prise renforcée véhicule électrique",
+    title: "Prise renforcée pour recharger votre voiture électrique",
+    metaTitle: "Prise renforcée Green'Up à Tourcoing et Lille",
     metaDescription:
-      "Installation de borne de recharge (wallbox) pour voiture électrique ou hybride à Tourcoing, Roubaix, Lille et dans la métropole : étude de puissance, pose, mise en service.",
+      "Pose de prise renforcée type Green'Up pour recharger votre voiture électrique ou hybride à domicile, à Tourcoing, Roubaix, Lille et dans la métropole : ligne dédiée, protections adaptées, mise en service.",
     excerpt:
-      "Une wallbox posée dans les règles : étude de votre abonnement, ligne dédiée, protections adaptées et mise en service.",
-    photo: "borne",
+      "Une prise renforcée type Green'Up sur une ligne dédiée : la recharge à domicile simple, sûre et économique pour votre voiture électrique ou hybride.",
+    photo: "intervention", // À remplacer par une photo d'une prise posée par Benoît,
     intro: [
-      "Recharger sa voiture électrique sur une prise domestique est lent et peut faire chauffer l'installation. Une borne murale dédiée (wallbox) recharge plus vite, en toute sécurité, et peut être pilotée pour profiter des heures creuses.",
-      "Nous étudions votre installation et votre abonnement avant de vous conseiller la puissance adaptée, puis nous posons la borne avec sa ligne et ses protections dédiées, en maison individuelle comme en garage de copropriété.",
+      "Brancher sa voiture électrique sur une prise ordinaire, c'est une recharge lente et une prise qui chauffe pendant des heures, souvent sur un circuit partagé avec d'autres appareils. Une prise renforcée (type Green'Up) est conçue pour supporter une charge longue et régulière, en toute sécurité.",
+      "Nous la posons sur une ligne dédiée, avec ses propres protections au tableau, dans votre garage, votre allée ou sous votre carport. Vous rechargez avec le câble fourni avec votre véhicule, idéalement la nuit en heures creuses.",
     ],
     signs: {
       title: "Pour qui ?",
       items: [
         "Propriétaires de maison avec garage, allée ou carport",
-        "Résidents de copropriété disposant d'une place de parking",
-        "Commerces et entreprises souhaitant équiper leur parking",
         "Conducteurs de voitures hybrides rechargeables",
+        "Conducteurs de voitures électriques qui roulent surtout au quotidien (trajets domicile-travail)",
+        "Ceux qui rechargent aujourd'hui sur une prise classique ou une rallonge",
       ],
     },
     includes: [
-      "Étude de la puissance disponible et du meilleur emplacement",
-      "Conseil sur le choix de la borne (7,4 kW, 11 kW, pilotage, délestage)",
-      "Tirage d'une ligne dédiée et protections différentielles adaptées",
-      "Pose, raccordement, paramétrage et test de charge avec votre véhicule",
-      "Informations sur les aides et démarches possibles selon votre situation",
+      "Vérification de votre tableau, de votre abonnement et du meilleur emplacement",
+      "Fourniture et pose d'une prise renforcée de marque (type Green'Up), intérieure ou extérieure",
+      "Ligne dédiée depuis le tableau, avec disjoncteur et protection différentielle adaptés",
+      "Mise en service et test de charge avec votre véhicule",
+      "Conseils pour recharger en heures creuses et ménager votre installation",
     ],
     approach: [
       "Échange sur votre véhicule, vos trajets et votre stationnement.",
       "Visite technique et devis détaillé.",
-      "Installation de la borne, en général en une demi-journée à une journée.",
-      "Mise en service, démonstration et remise des documents.",
+      "Pose de la prise et de sa ligne dédiée, en général en une demi-journée.",
+      "Mise en service, test avec votre véhicule et explications.",
     ],
     faq: [
       {
-        q: "Quelle puissance de borne choisir ?",
-        a: "Pour la plupart des particuliers, une borne de 7,4 kW en monophasé suffit pour recharger complètement la voiture pendant la nuit. Le 11 kW nécessite un raccordement triphasé. Nous vérifions votre abonnement et votre installation avant de conseiller.",
+        q: "Quelle est la différence entre une prise renforcée et une prise classique ?",
+        a: "Une prise classique n'est pas faite pour délivrer un courant élevé pendant des heures : elle peut chauffer, et la voiture limite alors sa puissance de charge. La prise renforcée, posée sur une ligne dédiée, supporte cet usage en continu et recharge plus vite, en toute sécurité.",
       },
       {
-        q: "Faut-il augmenter la puissance de mon abonnement ?",
-        a: "Pas toujours. Une borne avec délestage ou pilotage adapte la puissance de charge à votre consommation et évite souvent un changement d'abonnement.",
+        q: "Combien de temps faut-il pour recharger ?",
+        a: "Avec une prise renforcée, comptez de l'ordre de 15 à 20 km d'autonomie récupérés par heure de charge, soit 150 à 200 km sur une nuit selon le véhicule. C'est largement suffisant pour les trajets du quotidien et pour une hybride rechargeable.",
       },
       {
-        q: "Peut-on installer une borne en copropriété ?",
-        a: "Oui. Vous bénéficiez d'un « droit à la prise » : il suffit d'informer le syndic avant les travaux. Nous vous aidons à préparer le dossier technique.",
+        q: "Faut-il un câble particulier ?",
+        a: "Vous utilisez le câble de recharge pour prise domestique (avec boîtier de contrôle) fourni avec la plupart des véhicules, ou disponible en option chez le constructeur. Nous vérifions avec vous qu'il est compatible avant la pose.",
+      },
+      {
+        q: "Installez-vous aussi des bornes de recharge (wallbox) ?",
+        a: "Pas pour le moment : nous nous concentrons sur la prise renforcée, qui couvre la grande majorité des besoins à domicile. Si votre usage demande une recharge plus rapide, nous vous le dirons honnêtement lors de la visite.",
       },
     ],
   },
@@ -291,7 +295,7 @@ export const services: Service[] = [
       "Maison neuve, extension, combles aménagés, garage ou local commercial : une installation pensée dès le départ pour vos usages.",
     photo: "neuf",
     intro: [
-      "Dans un projet neuf ou une extension, l'électricité se prévoit tôt : emplacement des prises, éclairage, réseau informatique, chauffage, future borne de recharge. Nous travaillons à partir de vos plans et en lien avec vos autres intervenants.",
+      "Dans un projet neuf ou une extension, l'électricité se prévoit tôt : emplacement des prises, éclairage, réseau informatique, chauffage, recharge du véhicule électrique. Nous travaillons à partir de vos plans et en lien avec vos autres intervenants.",
       "Nous équipons aussi les locaux professionnels : commerces, bureaux, ateliers. L'installation est dimensionnée pour votre activité, avec un tableau clair et évolutif.",
     ],
     signs: {
@@ -340,7 +344,7 @@ export function getService(slug: string) {
 export const generalFaq: Faq[] = [
   {
     q: "Le devis est-il gratuit ?",
-    a: "Oui. Pour tous les travaux (rénovation, mise aux normes, borne, éclairage…), le déplacement pour établir le devis et le devis lui-même sont gratuits et sans engagement.",
+    a: "Oui. Pour tous les travaux (rénovation, mise aux normes, prise de recharge, éclairage…), le déplacement pour établir le devis et le devis lui-même sont gratuits et sans engagement.",
   },
   {
     q: "Dans quelles villes intervenez-vous ?",

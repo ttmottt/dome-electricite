@@ -10,7 +10,7 @@ import { services } from "@/lib/services";
 export const metadata = pageMetadata({
   title: "Services d'électricien à Tourcoing et Lille",
   description:
-    "Dépannage électrique, rénovation, mise aux normes et tableau électrique, borne de recharge, éclairage LED et domotique, installation neuve : tous les services de Domé Électricité à Tourcoing, Roubaix et Lille.",
+    "Dépannage électrique, rénovation, mise aux normes et tableau électrique, prise renforcée pour véhicule électrique, éclairage LED et domotique, installation neuve : tous les services de Domé Électricité à Tourcoing, Roubaix et Lille.",
   path: "/services",
 });
 

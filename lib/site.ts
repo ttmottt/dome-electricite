@@ -2,19 +2,25 @@
 // Sources : registre SIRENE (recherche-entreprises.api.gouv.fr) et fiche Electricien24.
 // Les valeurs marquées "À COMPLÉTER" sont à remplacer avant la mise en ligne.
 
+const facebookId = "61586416887503";
+
 export const site = {
   name: "Domé Électricité",
   founder: "Benoît Domé",
-  foundingYear: 2018,
   satisfiedClients: 30,
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dome-electricite.fr").replace(/\/$/, ""),
   tagline: "Électricien à Tourcoing et dans la métropole lilloise",
   description:
-    "Domé Électricité, artisan électricien à Tourcoing depuis 2018 : dépannage, rénovation, mise aux normes NF C 15-100, tableau électrique, borne de recharge et éclairage LED dans toute la métropole lilloise. Devis gratuit.",
+    "Domé Électricité, artisan électricien à Tourcoing : dépannage, rénovation, mise aux normes NF C 15-100, tableau électrique, prise de recharge pour voiture électrique et éclairage LED dans toute la métropole lilloise. Devis gratuit.",
 
   phone: "06 49 50 81 94",
   phoneHref: "+33649508194",
   email: "bdome@dome-elec.com",
+
+  // Messageries : une chaîne vide masque le canal partout sur le site.
+  facebook: `https://www.facebook.com/profile.php?id=${facebookId}`,
+  messenger: `https://m.me/${facebookId}`,
+  whatsapp: `https://wa.me/33649508194?text=${encodeURIComponent("Bonjour, je vous contacte depuis votre site : ")}`,
 
   address: {
     street: "8 rue d'Iéna",
@@ -47,7 +53,7 @@ export const site = {
     insurance: "", // À COMPLÉTER : assureur et n° de contrat (décennale / RC pro)
   },
 
-  social: [] as string[], // À COMPLÉTER : URL de la page Facebook, fiche Google Business Profile…
+  social: [`https://www.facebook.com/profile.php?id=${facebookId}`] as string[], // À COMPLÉTER : fiche Google Business Profile
 } as const;
 
 export const fullAddress = [site.address.street, `${site.address.postalCode} ${site.address.city}`]

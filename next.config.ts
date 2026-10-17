@@ -19,6 +19,15 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     remotePatterns: wpHost ? [{ protocol: "https", hostname: wpHost, pathname: "/wp-content/uploads/**" }] : [],
   },
+  async redirects() {
+    return [
+      {
+        source: "/services/borne-de-recharge",
+        destination: "/services/prise-renforcee-vehicule-electrique",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

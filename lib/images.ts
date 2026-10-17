@@ -3,8 +3,6 @@ import type { StaticImageData } from "next/image";
 import depannage from "@/public/images/electricien-depannage-tourcoing.webp";
 import tableau from "@/public/images/tableau-electrique-mise-aux-normes.webp";
 import renovation from "@/public/images/renovation-electrique-metropole-lilloise.webp";
-import borne from "@/public/images/borne-recharge-vehicule-electrique-tourcoing.webp";
-import borneMaison from "@/public/images/borne-recharge-maison-individuelle.webp";
 import eclairage from "@/public/images/eclairage-led-domotique-maison.webp";
 import intervention from "@/public/images/electricien-intervention-lille.webp";
 import neuf from "@/public/images/installation-electrique-neuve.webp";
@@ -27,16 +25,6 @@ export const photos = {
     src: renovation,
     alt: "Électricien préparant un câble pour une rénovation électrique dans la métropole lilloise",
     credit: "Jimmy Nilsson Masth / Unsplash",
-  },
-  borne: {
-    src: borne,
-    alt: "Borne de recharge pour véhicule électrique installée sur un mur en briques à Tourcoing",
-    credit: "dcbel / Unsplash",
-  },
-  borneMaison: {
-    src: borneMaison,
-    alt: "Borne de recharge murale installée à l'extérieur d'une maison individuelle",
-    credit: "dcbel / Unsplash",
   },
   eclairage: {
     src: eclairage,

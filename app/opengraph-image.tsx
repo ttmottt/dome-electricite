@@ -29,7 +29,7 @@ export default async function OpengraphImage() {
         />
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: 700 }}>
           <div style={{ display: "flex", fontSize: 28, color: "#f19e12", letterSpacing: 4, textTransform: "uppercase" }}>
-            Artisan électricien depuis {site.foundingYear}
+            Artisan électricien · Devis gratuit
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2 }}>Électricien à Tourcoing</div>

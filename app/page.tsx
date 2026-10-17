@@ -24,6 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cities, otherTowns } from "@/lib/cities";
 import { photos } from "@/lib/images";
+import { googleRating } from "@/lib/reviews";
 import { pageMetadata } from "@/lib/seo";
 import { generalFaq, services } from "@/lib/services";
 import { fullAddress, site } from "@/lib/site";
@@ -31,7 +32,7 @@ import { fullAddress, site } from "@/lib/site";
 export const metadata = pageMetadata({
   title: `Électricien à Tourcoing – ${site.name} | Métropole lilloise`,
   description:
-    "Électricien à Tourcoing depuis 2018 : dépannage, rénovation, mise aux normes, tableau électrique, borne de recharge et éclairage LED à Roubaix, Lille et dans toute la métropole lilloise. Devis gratuit.",
+    "Électricien à Tourcoing : dépannage, rénovation, mise aux normes, tableau électrique, prise de recharge pour voiture électrique et éclairage LED à Roubaix, Lille et dans toute la métropole lilloise. Devis gratuit.",
   path: "/",
   absoluteTitle: true,
 });
@@ -66,7 +67,7 @@ export default function HomePage() {
             <HeroText>
               <Badge variant="outline" className="h-8 gap-2 rounded-full border-primary/40 px-3.5 text-sm text-foreground">
                 <span className="size-2 rounded-full bg-primary shadow-[0_0_0_4px_rgb(241_158_18/0.25)]" />
-                Artisan électricien à Tourcoing depuis {site.foundingYear}
+                Artisan électricien à Tourcoing
               </Badge>
             </HeroText>
             <HeroText delay={0.08}>
@@ -76,7 +77,7 @@ export default function HomePage() {
             </HeroText>
             <HeroText delay={0.16}>
               <p className="mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
-                Dépannage, rénovation, mise aux normes, tableau électrique, borne de recharge et éclairage, pour les
+                Dépannage, rénovation, mise aux normes, tableau électrique, prise de recharge pour voiture électrique et éclairage, pour les
                 particuliers et les professionnels de Tourcoing, Roubaix, Lille et des communes voisines.
               </p>
             </HeroText>
@@ -225,9 +226,10 @@ export default function HomePage() {
             </div>
             <div className="absolute -right-2 bottom-10 rounded-3xl bg-ink px-7 py-6 text-cream shadow-2xl md:-right-8">
               <p className="font-display text-6xl leading-none font-bold text-primary">
-                <CountUp from={2000} to={site.foundingYear} />
+                {googleRating}
+                <span className="text-3xl text-cream/60">/5</span>
               </p>
-              <p className="mt-1 text-sm">à votre service depuis</p>
+              <p className="mt-1 text-sm">sur les avis Google</p>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
@@ -237,8 +239,7 @@ export default function HomePage() {
             </h2>
             <div className="prose-site mt-6 text-lg text-foreground/80">
               <p>
-                {site.name} est l'entreprise de {site.founder}, artisan électricien installé à Tourcoing. Depuis{" "}
-                {site.foundingYear}, il accompagne les habitants et les professionnels de la métropole lilloise, du
+                {site.name} est l'entreprise de {site.founder}, artisan électricien installé à Tourcoing. Il accompagne les habitants et les professionnels de la métropole lilloise, du
                 simple dépannage à la rénovation complète d'une maison.
               </p>
               <p>

@@ -1,5 +1,6 @@
 import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 
+import { messagingChannels } from "@/components/BrandIcons";
 import { ContactForm } from "@/components/ContactForm";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/motion/reveal";
@@ -65,6 +66,19 @@ export default function ContactPage() {
                   </span>
                 </a>
               </li>
+              {messagingChannels.map(({ name, action, href, icon: Icon, tile }) => (
+                <li key={name}>
+                  <a href={href} target="_blank" rel="noopener" className="group flex items-center gap-4">
+                    <span className={`grid size-12 place-items-center rounded-2xl ${tile}`}>
+                      <Icon className="size-5" />
+                    </span>
+                    <span>
+                      <span className="block text-sm text-muted-foreground">{name}</span>
+                      <span className="font-semibold group-hover:text-primary">{action}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
               <li>
                 <a href={mapsUrl} target="_blank" rel="noopener" className="group flex items-center gap-4">
                   <span className="grid size-12 place-items-center rounded-2xl bg-secondary text-primary">
