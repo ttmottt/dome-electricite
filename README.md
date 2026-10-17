@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Domé Électricité – site vitrine
 
-## Getting Started
+Site de présentation de **Domé Électricité** (Benoît Domé, artisan électricien, 8 rue d'Iéna, 59200 Tourcoing),
+optimisé pour le référencement local sur Tourcoing et la métropole lilloise.
 
-First, run the development server:
+Stack : Next.js 16 (App Router, Cache Components), Tailwind CSS v4, shadcn/ui (Radix), motion, Lucide.
+
+## Démarrer
 
 ```bash
+cp .env.example .env.local   # puis compléter les variables
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Où modifier quoi
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Fichier | Contenu |
+| --- | --- |
+| `lib/site.ts` | Coordonnées, horaires, infos légales (**téléphone et e-mail à compléter**) |
+| `lib/services.ts` | Les 6 services (textes, FAQ, métadonnées SEO) |
+| `lib/cities.ts` | Les villes avec page dédiée `/electricien/[ville]` et les autres communes desservies |
+| `lib/images.ts` | Photos (dans `public/images/`, WebP optimisés) et textes alternatifs |
+| `app/globals.css` | Charte : primary `#F19E12`, crème `#FCF3E2`, blanc, noir (tokens shadcn) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Pages
 
-## Learn More
+- `/` accueil, `/services` + 6 pages services, `/zones-intervention` + 10 pages villes
+- `/a-propos`, `/contact` (formulaire → e-mail via Brevo), `/mentions-legales`
+- `/realisations` + `/realisations/[slug]` : articles venant de WordPress (optionnel)
 
-To learn more about Next.js, take a look at the following resources:
+## SEO
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Métadonnées par page (title, description, canonical, Open Graph, Twitter) via `lib/seo.ts`
+- JSON-LD : `Electrician` (LocalBusiness), `WebSite`, `Service`, `FAQPage`, `BreadcrumbList`, `BlogPosting`
+- `sitemap.xml`, `robots.txt`, manifest, favicon/icônes, image Open Graph générée (`app/opengraph-image.tsx`)
+- Pages villes au contenu propre à chaque commune (quartiers, type de bâti) pour éviter les pages satellites
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Formulaire de contact (Brevo)
 
-## Deploy on Vercel
+Variables : `BREVO_API_KEY`, `BREVO_SENDER_EMAIL` (expéditeur validé dans Brevo), `BREVO_SENDER_NAME`,
+`CONTACT_RECIPIENT_EMAIL`. En développement sans clé, la demande est affichée dans la console.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## WordPress headless (optionnel)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Installer WordPress sur un sous-domaine (ex. `cms.dome-electricite.fr`) et y publier les articles.
+2. Définir `WP_API_URL=https://cms.dome-electricite.fr/wp-json` (les images `wp-content/uploads` sont autorisées automatiquement).
+3. Revalidation instantanée : définir `REVALIDATE_SECRET`, puis configurer un webhook WordPress
+   (ex. extension *WP Webhooks*) à la publication : `POST https://www.dome-electricite.fr/api/revalidate`
+   avec le corps `{ "secret": "…", "slug": "<slug de l'article>" }`. Sans webhook, le contenu se met à jour en moins d'une heure.
+
+Les titres/descriptions Yoast (`yoast_head_json`) sont repris s'ils existent.
+
+## Déploiement (Vercel)
+
+Renseigner les variables d'environnement dans le projet Vercel (`NEXT_PUBLIC_SITE_URL` = domaine final), puis
+`vercel --prod`. Après la mise en ligne : déclarer le sitemap dans Google Search Console et relier le site à la
+fiche Google Business Profile (même nom, adresse et téléphone que sur le site).
+
+## Crédits photos
+
+Photos d'illustration sous licence Unsplash (voir `lib/images.ts`). À remplacer idéalement par de vraies photos de chantiers.
